@@ -1,0 +1,252 @@
+body {
+    font-family: "Roboto", sans-serif;
+    color: #434455; 
+    background-color: #FFFFFF;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+ul{
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+a{
+  text-decoration: none;
+}
+img{
+    display: block;
+}
+
+.visually-hidden { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden; }
+
+
+
+.container{
+  max-width: 320px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+
+@media (min-width: 768px){
+  .container{
+    max-width: 768px;
+  }
+
+}
+
+@media (min-width: 1158px){
+  .container{
+    max-width: 1158px;
+    padding: 0 15px;
+  }
+}
+@media (max-width: 767px){
+  .header{
+    padding: 16px 0;
+
+  }
+}
+
+.header-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo-brand {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #4d5ae5;
+  margin-right: 76px
+}
+
+.logo-span {
+  color: #2e2f42;
+}
+.nav-menu{
+  display: none;
+}
+
+@media (min-width: 768px){
+  .nav-menu{
+    display: flex;
+    gap: 40px;
+  }
+  .nav{
+    display: flex;
+    align-items: center;
+  }
+  .nav-menu-item{
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+    padding: 24px 0;
+    display: block;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.cover{
+  position: relative;
+  color: #404bbf;
+}
+
+.cover::after{
+  content: '';
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 4px;
+  background-color: #404bbf;
+  border-radius: 2px;
+}
+}
+.address-list{
+  display: none;
+}
+
+@media (min-width: 768px){
+  .address-list{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  address{
+    font-style: normal;
+    color: #434455;
+}
+.menu-address{
+  color: #434455;
+  font-size: 12px;
+  line-height: 117%;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-address:hover,
+.menu-address:focus {
+  color: #404bbf;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+}
+@media (min-width: 1158px){
+  .address-list{
+    flex-direction: row;
+    gap: 40px;
+  }
+  .menu-address{
+    font-size: 16px;
+    line-height: 1.5px;
+  }
+}
+.menu-btn{
+  border: none;
+  background-color: transparent;
+}
+@media (min-width: 768px){
+  .menu-btn{
+    display: none;
+  }
+}
+
+/* ----mob-menu------ */
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  padding: 72px 16px 40px 16px;
+  display: flex;
+  flex-direction: column;
+  transform: translate(100%);
+}
+
+.mobile-menu.is-open{
+  transform: translate(0%);
+}
+.modal-close-btn {
+  border-radius: 50%;
+  border-color: #E7E9FC;
+  stroke-width: 1px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #E7E9FC;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-icon {
+}
+.mob-nav-menu {
+  margin-bottom: auto;
+}
+.mob-nav-menu-item {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 111%;
+  letter-spacing: 0.02em;
+  color: #2E2F42;
+}
+
+.mob-nav-item:not(:last-child){
+  margin-bottom: 40px;
+}
+.mob-address-list {
+  margin-bottom: 48px;
+}
+.mob-menu-address {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: 0.02em;
+  color: #434455;
+}
+.mob-contact:not(:last-child){
+  margin-bottom: 24px;
+}
+.mob-icon-list {
+  display: flex;
+  gap: 40px;
+}
+.active {
+  color: #404BBF;
+}
+.mob-icon-team-media {
+  width: 40px;
+  height: 40px;
+}
+.mob-icon-link {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #4D5AE5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-footer {
+  fill: #fff;
+}
+
+
+
+/* -----hero-top section------ */
+
